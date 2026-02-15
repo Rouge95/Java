@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rouge95's Notes – Java Objects</title>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <main>
+        <nav class="breadcrumb">
+            <a href="../index.html">Index</a> &gt;
+            <span>Section 2: Java Objects</span>
+        </nav>
+
+        <div class="content">
+            <h1>Section 2.1: Methods and Parameters</h1>
+            <hr>
+        </div>
+
+        <div id="content">
+
+            <!-- Part 1: Object-Oriented Characteristics -->
+            <details>
+                <summary>
+                    <h2>Part 1: Characteristics of Object-Oriented Programming</h2>
+                </summary>
+                <p><strong>Question:</strong> What are the five characteristics of an object-oriented approach to
+                    programming?</p>
+                <ul>
+                    <li><strong>1. Encapsulation:</strong> Bundling data and methods inside objects to hide
+                        implementation details.</li>
+                    <li><strong>2. Abstraction:</strong> Exposing only essential features while hiding complexity.</li>
+                    <li><strong>3. Inheritance:</strong> Creating new classes from existing ones to promote code reuse.
+                    </li>
+                    <li><strong>4. Polymorphism:</strong> Allowing objects of different types to be treated uniformly.
+                    </li>
+                    <li><strong>5. Message Passing (or Communication):</strong> Objects interact via method calls to
+                        perform behavior.</li>
+                </ul>
+
+                <p><strong>Question:</strong> What are two reasons for controlling access to members of objects and how
+                    does Java implement control?</p>
+                <ul>
+                    <li>To protect data integrity and prevent unauthorized access.</li>
+                    <li>To enforce modular design by hiding implementation details.</li>
+                    <li>Java uses <code>private</code>, <code>protected</code>, <code>public</code>, and
+                        <code>default</code> access modifiers to implement access control.</li>
+                </ul>
+
+                <p><strong>Question:</strong> What are two ways of re-using classes?</p>
+                <ul>
+                    <li>Inheritance – extend existing classes to create specialized subclasses.</li>
+                    <li>Composition – include existing classes as member objects within new classes.</li>
+                </ul>
+            </details>
+
+            <!-- Part 2: Late Binding and Polymorphism -->
+            <details>
+                <summary>
+                    <h2>Part 2: Late Binding</h2>
+                </summary>
+                <p><strong>Question:</strong> How does late binding enable upcasting and polymorphism?</p>
+                <ul>
+                    <li>Late binding (dynamic method dispatch) allows the JVM to determine at runtime which method to
+                        invoke based on the actual object type.</li>
+                    <li>Upcasting: a subclass object can be referenced by a superclass variable, while the correct
+                        overridden method executes dynamically.</li>
+                    <li>This enables polymorphism: different object types can be used interchangeably with consistent
+                        behavior.</li>
+                </ul>
+            </details>
+
+            <!-- Part 3: Containers and Generics -->
+            <details>
+                <summary>
+                    <h2>Part 3: Containers and Generics</h2>
+                </summary>
+                <p><strong>Question:</strong> What is a container? What is an advantage of using a container?</p>
+                <ul>
+                    <li>A container is an object that holds and organizes multiple other objects, e.g., ArrayList,
+                        HashMap.</li>
+                    <li>Advantage: simplifies management of groups of objects and provides generic operations like
+                        iteration, sorting, and searching.</li>
+                </ul>
+
+                <p><strong>Question:</strong> What is 'parameterized types/generics'? How does it eliminate the need for
+                    downcasting?</p>
+                <ul>
+                    <li>Generics allow classes and methods to operate on objects of specified types while maintaining
+                        type safety.</li>
+                    <li>They eliminate downcasting by ensuring compile-time type checks, so retrieved objects are
+                        already of the expected type.</li>
+                </ul>
+
+                <p><strong>Question:</strong> Where in memory does Java create objects?</p>
+                <ul>
+                    <li>Objects are created on the heap, and references to them are stored in stack memory variables.
+                    </li>
+                </ul>
+            </details>
+
+            <!-- Part 4: Exception Handling and Threads -->
+            <details>
+                <summary>
+                    <h2>Part 4: Exception Handling and Threads</h2>
+                </summary>
+                <p><strong>Question:</strong> What is the function of exception handling and how does Java reinforce
+                    consistent use?</p>
+                <ul>
+                    <li>Exception handling manages runtime errors, preventing program crashes.</li>
+                    <li>Java enforces checked exceptions, requiring methods to declare or handle them, ensuring
+                        consistent error management.</li>
+                </ul>
+
+                <p><strong>Question:</strong> What are the functions of threads in single-processor and multi-processor
+                    environments?</p>
+                <ul>
+                    <li>Single-processor: threads enable multitasking by time-slicing the CPU.</li>
+                    <li>Multi-processor: threads can run in parallel, improving performance for concurrent tasks.</li>
+                </ul>
+            </details>
+
+            <!-- Part 5: Client/Server and Web Programming -->
+            <details>
+                <summary>
+                    <h2>Part 5: Client/Server Systems and Web Programming</h2>
+                </summary>
+                <p><strong>Question:</strong> What is the primary idea of a client/server system?</p>
+                <ul>
+                    <li>A server provides resources or services; clients request and consume them over a network.</li>
+                </ul>
+
+                <p><strong>Question:</strong> How did Web serving lead to client-side programming?</p>
+                <ul>
+                    <li>Web servers could only provide static pages; to handle dynamic content and interactive features,
+                        processing moved to the client side (e.g., JavaScript).</li>
+                </ul>
+
+                <p><strong>Question:</strong> What is CGI programming and its major shortcoming?</p>
+                <ul>
+                    <li>CGI (Common Gateway Interface) allows server-side scripts to process client requests.</li>
+                    <li>Shortcoming: each request spawns a new process, which is resource-intensive and slower.</li>
+                </ul>
+
+                <p><strong>Question:</strong> Why is client-side programming efficient for the Web?</p>
+                <ul>
+                    <li>Reduces server load and network traffic by handling computations and interactions locally on the
+                        client machine.</li>
+                </ul>
+
+                <p><strong>Question:</strong> What is a plugin?</p>
+                <ul>
+                    <li>A plugin is a software module that extends the capabilities of the client application (e.g.,
+                        browser plugins for multimedia support).</li>
+                </ul>
+
+                <p><strong>Question:</strong> What is a scripting language?</p>
+                <ul>
+                    <li>A high-level language used to automate tasks, often interpreted rather than compiled, e.g.,
+                        JavaScript or Python.</li>
+                </ul>
+
+                <p><strong>Question:</strong> Compare scripting languages to Java for Web page needs.</p>
+                <ul>
+                    <li>Scripting languages execute quickly on the client, are flexible for lightweight tasks, and do
+                        not require compilation. Java is more structured, type-safe, and compiled to bytecode, offering
+                        stronger portability and performance.</li>
+                </ul>
+
+                <p><strong>Question:</strong> What are the issues of Intranet vs Internet programming?</p>
+                <ul>
+                    <li>Intranet: controlled, secure environment; easier deployment.</li>
+                    <li>Internet: public exposure, higher security risks, scalability and bandwidth challenges.</li>
+                </ul>
+
+                <p><strong>Question:</strong> What is the role of Java in server-side programming?</p>
+                <ul>
+                    <li>Java provides robust, platform-independent server-side solutions, including servlets, JSP, and
+                        enterprise frameworks for scalable web applications.</li>
+                </ul>
+            </details>
+
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch('../header.html').then(r => r.text()).then(data => document.getElementById('header').innerHTML = data);
+        fetch('../footer.html').then(r => r.text()).then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+
+</html>
