@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rouge95's Notes – Java Objects & Classes</title>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <main>
+        <nav class="breadcrumb">
+            <a href="../index.html">Index</a> &gt;
+            <span>Section 2: Objects, Classes, and Documentation</span>
+        </nav>
+
+        <div class="content">
+            <h1>Section 2: Objects and Classes in Java</h1>
+            <hr>
+        </div>
+
+        <div id="content">
+
+            <!-- Part 1 -->
+            <details>
+                <summary>
+                    <h2>Part 1: Objects and Primitive Types</h2>
+                </summary>
+
+                <p><strong>Object vs Handle</strong></p>
+                <ul>
+                    <li><strong>Object:</strong> The actual data stored in memory (on the heap).</li>
+                    <li><strong>Handle (Reference):</strong> A variable that stores the address of the object.</li>
+                </ul>
+
+                <p><strong>Memory Areas in Java</strong></p>
+                <ul>
+                    <li><strong>Registers:</strong> Fast CPU storage (not directly controlled by programmer).</li>
+                    <li><strong>Stack:</strong> Stores primitive values and object references.</li>
+                    <li><strong>Heap:</strong> Stores objects.</li>
+                    <li><strong>Constant Storage:</strong> Stores constant values (e.g., string literals).</li>
+                    <li><strong>Non-RAM Storage:</strong> Persistent storage (e.g., files, databases).</li>
+                </ul>
+
+                <p><strong>Nine Primitive Types</strong></p>
+                <ul>
+                    <li>boolean</li>
+                    <li>char</li>
+                    <li>byte</li>
+                    <li>short</li>
+                    <li>int</li>
+                    <li>long</li>
+                    <li>float</li>
+                    <li>double</li>
+                    <li>void</li>
+                </ul>
+
+                <p><strong>High-Precision Classes (No Primitive Equivalent)</strong></p>
+                <ul>
+                    <li>BigInteger</li>
+                    <li>BigDecimal</li>
+                </ul>
+
+                <p><strong>Scope: Primitives vs Objects</strong></p>
+                <ul>
+                    <li>Primitives are destroyed when leaving scope.</li>
+                    <li>Objects remain until garbage collected (reference may go out of scope first).</li>
+                </ul>
+            </details>
+
+            <!-- Part 2 -->
+            <details>
+                <summary>
+                    <h2>Part 2: Classes, Fields, and Methods</h2>
+                </summary>
+
+                <p><strong>Definitions</strong></p>
+                <ul>
+                    <li><strong>Class:</strong> Blueprint defining data and behavior.</li>
+                    <li><strong>Field:</strong> Data member inside a class.</li>
+                    <li><strong>Method:</strong> Function that defines behavior.</li>
+                </ul>
+
+                <p><strong>Default Values vs Local Variables</strong></p>
+                <ul>
+                    <li>Class member primitives receive default values (e.g., int → 0).</li>
+                    <li>Local variables must be explicitly initialized before use.</li>
+                </ul>
+
+                <p><strong>Fundamental Parts of a Method</strong></p>
+                <ul>
+                    <li>Access modifier</li>
+                    <li>Return type</li>
+                    <li>Method name</li>
+                    <li>Parameter list</li>
+                    <li>Method body</li>
+                </ul>
+            </details>
+
+            <!-- Part 3 -->
+            <details>
+                <summary>
+                    <h2>Part 3: Namespaces, import, static</h2>
+                </summary>
+
+                <p><strong>Naming Convention for Public Libraries</strong></p>
+                <ul>
+                    <li>Use reverse domain naming (e.g., com.company.project).</li>
+                </ul>
+
+                <p><strong>Purpose of import</strong></p>
+                <ul>
+                    <li>Allows use of classes without fully qualifying package names.</li>
+                </ul>
+
+                <p><strong>Functions of static</strong></p>
+                <ul>
+                    <li>Shared across all objects of a class.</li>
+                    <li>Can be accessed without creating an instance.</li>
+                    <li>Used for utility methods and shared data.</li>
+                </ul>
+            </details>
+
+            <!-- Part 4 -->
+            <details>
+                <summary>
+                    <h2>Part 4: Compiling and Running Java</h2>
+                </summary>
+
+                <p><strong>How HelloDate.java Prints the Date</strong></p>
+                <ul>
+                    <li>Creates a Date object.</li>
+                    <li>Calls System.out.println() to display it.</li>
+                </ul>
+
+                <p><strong>public static void main(String[] args)</strong></p>
+                <ul>
+                    <li><strong>public:</strong> Accessible to JVM.</li>
+                    <li><strong>static:</strong> No object needed to invoke.</li>
+                    <li><strong>void:</strong> Returns nothing.</li>
+                    <li><strong>main:</strong> Entry point.</li>
+                    <li><strong>String[] args:</strong> Command-line arguments.</li>
+                </ul>
+
+                <p><strong>Why main is static</strong></p>
+                <ul>
+                    <li>JVM must call it without creating an object first.</li>
+                </ul>
+
+                <p><strong>Compile & Run</strong></p>
+                <ul>
+                    <li>Compile: <code>javac HelloDate.java</code></li>
+                    <li>Run: <code>java HelloDate</code></li>
+                </ul>
+            </details>
+
+            <!-- Part 5 -->
+            <details>
+                <summary>
+                    <h2>Part 5: Documentation and Coding Style</h2>
+                </summary>
+
+                <p><strong>Standard Coding Style</strong></p>
+                <ul>
+                    <li>Class names: Capitalized (CamelCase).</li>
+                    <li>Method/variable names: lowerCamelCase.</li>
+                    <li>Braces on same line.</li>
+                    <li>Indentation consistent (4 spaces).</li>
+                    <li>Use Javadoc comments for classes and methods.</li>
+                </ul>
+            </details>
+
+            <!-- Exercise -->
+            <details>
+                <summary>
+                    <h2>Exercise 10 – Answer</h2>
+                </summary>
+
+                <pre>
+/**
+ * Exercise 10 - Prints arguments passed from command line.
+ */
+public class Exercise10 {
+    public static void main(String[] args) {
+        for(String arg : args) {
+            System.out.println(arg);
+        }
+    }
+}
+</pre>
+
+            </details>
+
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch('../header.html').then(r => r.text()).then(data => document.getElementById('header').innerHTML = data);
+        fetch('../footer.html').then(r => r.text()).then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+
+</html>
